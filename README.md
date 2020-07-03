@@ -1,5 +1,5 @@
 # VulnUniversity
-## TryHackme [VulnUniversirty](https://tryhackme.com/room/vulnversity)
+## WriteUp TryHackme [VulnUniversirty](https://tryhackme.com/room/vulnversity)
 
 
 
@@ -44,7 +44,7 @@ nmap Results
 ```
 I used dirsearch, output file has been included
 
-dirsearch.py -u http://10.10.252.121:3333
+dirsearch.py -u http://10.10.252.121:3333 -e* -x 403 -t 100
 ```
 [dirsearch](https://github.com/maurosoria/dirsearch)
 
@@ -67,7 +67,7 @@ I tried uploading php, html files since it is an apache server. On uploading php
 
 *Now since we know .phtml files can be uploaded
 we upload a php reverse shell in the server
-[pentestmonkey](https://github.com/pentestmonkey/php-reverse-shell)
+[pentestmonkey's php reverse shell](https://github.com/pentestmonkey/php-reverse-shell)
 same reverse shell is provided in the repository as well copy it and change the IP and port number*
 
 *Start a netcat listener*
@@ -103,7 +103,7 @@ usually systemctl does not have a suid bit set
 
 [GTFOBins](https://gtfobins.github.io/gtfobins/systemctl/)
 
-*I found the above resource to be useful for privilege esclation i have made a copy of the above commands in test file you can exactly copy them on your shell (www-data) and then run*
+*I found the above resource to be useful for privilege esclation i have made a copy of the above commands in test file you can exactly copy them on your shell (www-data) and then run the commands now enter*
 
 `bash -p`
 
