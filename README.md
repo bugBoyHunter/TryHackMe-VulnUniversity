@@ -73,7 +73,10 @@ same reverse shell is provided in the repository as well copy it and change the 
 
 `nc -nvlp <port specified in the reverse shell>` 
 
-*Now upload the file and navigate to /internal/uploads/ and click on your uploaded php file on clicking that check your terminal **Congrats !!** you have got a reverse shell*
+*Now upload the file and navigate to /internal/uploads/* 
+![](./images/directory.png)
+
+*Now click on your uploaded php file on clicking that check your terminal **Congrats !!** you have got a reverse shell*
 
 #5 What is the name of the user who manages the webserver?
 ```
@@ -90,7 +93,10 @@ cat /home/bill/user.txt
 This command will find all the files in the system with suid bit set and redirect the error
 
 find / -perm /4000 2>/dev/null
+```
+![](./images/find.png)
 
+```
 usually systemctl does not have a suid bit set
 ```
 
@@ -99,6 +105,8 @@ usually systemctl does not have a suid bit set
 *I found the above resource to be useful for privilege esclation i have made a copy of the above commands in test file you can exactly copy them on your shell (www-data) and then run*
 
 `bash -p`
+
+![](./images/bash.png)
 
 **Tada now you are root**
 
